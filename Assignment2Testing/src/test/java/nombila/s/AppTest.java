@@ -1,71 +1,49 @@
 package nombila.s;
 
 import static org.junit.Assert.assertTrue;
+import java.io.Closeable;
+import java.io.IOException;
 
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static com.sandwich.koan.constant.KoanConstants.__;
-import static com.sandwich.util.Assert.assertEquals;
-import static com.sandwich.util.Assert.assertFalse;
-import static com.sandwich.util.Assert.assertNotNull;
-import static com.sandwich.util.Assert.assertNotSame;
-import static com.sandwich.util.Assert.assertNull;
-import static com.sandwich.util.Assert.assertSame;
-import static com.sandwich.util.Assert.assertTrue;
+public class SampleTest {
 
-import com.sandwich.koan.Koan;
+    @BeforeClass
+    public static void setUpBeforeClass() throws Exception {
 
-public class AboutAssertions {
 
-    @Koan
-    public void assertBooleanTrue() {
-        assertTrue(true); // should be true really
     }
 
-    @Koan
-    public void assertBooleanFalse() {
-        assertFalse(false);
+    @AfterClass
+    public static void tearDownAfterClass() throws Exception {
+
     }
 
-    @Koan
-    public void assertNullObject(){
-        assertNull(null);
+    @Before
+    public void setUp() throws Exception {
+
     }
 
-    @Koan
-    public void assertNotNullObject(){
-        assertNotNull(true); // anything other than null should pass here...
+    @After
+    public void tearDown() throws Exception {
+
+
     }
 
-    @Koan
-    public void assertEqualsUsingExpression(){
-        assertTrue("Hello World!".equals("Hello World!"));
+    @Test
+    public void test1() {
+
+
     }
 
-    @Koan
-    public void assertEqualsWithBetterFailureMessage(){
-        assertEquals(1, 1);
+    @Test
+    public void test2() {
+
+
     }
 
-    @Koan
-    public void assertEqualsWithDescriptiveMessage() {
-        // Generally, when using an assertXXX methods, expectation is on the
-        // left and it is best practice to use a String for the first arg
-        // indication what has failed
-        assertEquals("The answer to 'life the universe and everything' should be 42", 42, 42);
-    }
-
-    @Koan
-    public void assertSameInstance(){
-        Object same = new Integer(1);
-        Object sameReference = same;
-        assertSame(same, sameReference);
-    }
-
-    @Koan
-    public void assertNotSameInstance(){
-        Integer same = new Integer(1);
-        Integer sameReference = new Integer(1);
-        assertNotSame(same, sameReference);
-    }
 }
